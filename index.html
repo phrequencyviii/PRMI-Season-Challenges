@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>PRMI Challenges</h1>
+    <h2>Season 1</h2>
+    <h3>Time left in the season:</h3>
+        <p id="demo"></p>
+            <script>
+            // Set the date we're counting down to
+            var countDownDate = new Date("Aug 15, 2022 23:59:59").getTime();
+
+            // Update the count down every 1 second
+            var x = setInterval(function() {
+
+            // Get today's date and time
+            var now = new Date().getTime();
+                
+            // Find the distance between now and the count down date
+            var distance = countDownDate - now;
+                
+            // Time calculations for days, hours, minutes and seconds
+            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+                
+            // Output the result in an element with id="demo"
+            document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+            + minutes + "m " + seconds + "s ";
+                
+            // If the count down is over, write some text 
+            if (distance < 0) {
+                clearInterval(x);
+                document.getElementById("demo").innerHTML = "EXPIRED";
+            }
+            }, 1000);
+            </script>
+
+    <h2>Current challenges for this season:</h2>
+    <h3>Take the Keybr Typing Test</h3>
+    <a href="https://keybr.com/">KeyBr Website</a>
+    <p>Sign up for an account on KeyBr (this way your history is saved), take the typing test and share your results!</p>
+    <h4>Instructions:</h4>
+    <P>
+        <ol>1. Navigate to <a href="https://keybr.com/">KeyBr</a><br>
+        <img src="keybr1.png" alt="Keybr Website" width="700"><br></ol>
+        <ol>2. Create an account by clicking "Sign In"</a><br>
+        <img src="keybr2.png" alt="Sign In" width="200"><br>
+        Enter your email address at the bottom. Sign in's are passwordless, so you just need to click the "sign in" link in your inbox.<br>
+        <img src="keybr3.png" alt="Email address" width="700"><br></ol>
+        <ol>3. Click on "Typing Test" and complete the test.</a><br>
+        <img src="keybr4.png" alt="Typing Test" width="200"><br>
+        <img src="keybr5.png" alt="Typing Test" width="700"><br></ol>
+        <ol>4. Share your results!</a><br>
+        <img src="keybr6.png" alt="Results" width="500"><br></ol>
+    </P>
+
+    
+</body>
+</html>
